@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<script src="../content/js/loadDOM.js"></script>
+
+<head>
+    <script src="/content/js/main.js"></script>
+</head>
+
+<body>
+    <header class="site-navigation"></header>
+    <article>
+        <div class="bg">
+            <center>
+                <h1>Sign up</h1>
+            </center>
+            <hr>
+            <div class="su-f">
+                <h2>Greate to have you!</h2>
+                <div class="lightblue-centered-img">
+                    <img src="/content/images/forms/sign-up.png">
+                </div>
+
+                <form action="/f/sign-up.html">
+
+                    <label for="mail">Mail address:</label>
+                    <input type="email" id="mail" name="mailaddress" placeholder="Your mail address.." oninput="checkMailAddr(this.value)" required>
+                    <div id="email-warning"></div>
+                
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="userpassword" placeholder="Your strong password.." oninput="checkPassword(this.value)" required>
+                    <div id="password-warning"></div>
+
+                    <label for="repassword">Password again:</label>
+                    <input type="password" id="repassword" name="reuserpassword" placeholder="Your strong password again.." oninput="checkRePassword(this.value)" required>
+                    <div id="repassword-warning"></div>
+
+                    <input type="submit" value="Sign up" disabled>
+                
+                  </form>
+            </div>
+        </div>
+    </article>
+    <footer></footer>
+</body>
+</html>

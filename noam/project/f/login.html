@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<script src="../content/js/loadDOM.js"></script>
+
+<head>
+    <script src="/content/js/main.js"></script>
+</head>
+
+<body>
+    <header class="site-navigation"></header>
+    <article>
+        <div class="bg">
+            <center>
+                <h1>Login</h1>
+            </center>
+            <hr>
+            <div class="login-f">
+                <h2>Good to have you back!</h2>
+                <div class="centered-img">
+                    <img src="/content/images/forms/login.png">
+                </div>
+
+                <form action="/f/login.html">
+
+                    <label for="mail">Mail address:</label>
+                    <input type="email" id="mail" name="mailaddress" placeholder="Your mail address.." oninput="checkMailAddr(this.value)" required>
+                    <div id="email-warning"></div>
+                
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="userpassword" placeholder="Your strong password.." oninput="checkPassword(this.value)" required>
+                    <div id="password-warning"></div>
+
+                    <input type="submit" value="Login" disabled>
+                
+                </form>
+
+                <!-- Sign up -->
+                <hr>
+                <i>
+                  <h2>Dont have an Oracle account?</h2>
+                  <center>
+                      <p><b>Sign up <a href="/f/sign-up.html">here</a>.</b></p>
+                  </center>
+                </i>
+            </div>
+        </div>
+    </article>
+    <footer></footer>
+</body>
+</html>
