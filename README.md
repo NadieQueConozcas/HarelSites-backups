@@ -1,6 +1,6 @@
 # harelsites
 
-Backups for Harel college websites:
+Weekly backups for Harel college websites:
 
 - [Shays project](shay.alum.sh)
 - [Idos project](ido.alum.sh)
