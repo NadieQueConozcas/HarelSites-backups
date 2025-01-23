@@ -1,5 +1,7 @@
 [safe]
 	directory = /home/harelsites
+	directory = /home/harelsites
+	directory = /home/harelsites
 [user]
 	email = nadie.que.conozcas22@gmail.com
 	name = NadieQueConozcas
