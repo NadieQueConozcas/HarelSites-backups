@@ -1,0 +1,28 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="YourNamespace.Site" %>
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <title>Simple Master Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <h1>Welcome to My Website</h1>
+        </div>
+        <div class="menu">
+            <a href="Home.aspx">Home</a> |
+            <a href="About.aspx">About</a> |
+            <a href="Contact.aspx">Contact</a>
+        </div>
+        <div class="content">
+            <asp:ContentPlaceHolder id="MainContent" runat="server">
+                <!-- Content Page Placeholder -->
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 My Website. All rights reserved.</p>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Branches</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            justify-items: center;
+            margin: 20px auto;
+        }
+
+        .facebook-main {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .facebook {
+            border: 3px solid #0078ff;
+            border-radius: 15px;
+            padding: 15px;
+            width: 250px;
+        }
+
+        .facebook img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .continent {
+            border: 2px solid #0078ff;
+            border-radius: 10px;
+            padding: 15px;
+            width: 250px;
+            text-align: center;
+        }
+
+        .continent h2 {
+            background-color: #0078ff;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+
+        .branch-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .branch-item {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .branch-item img {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        .branch-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .department-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .department-table th, .department-table td {
+            border: 1px solid #0078ff;
+            padding: 8px;
+            text-align: left;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .department-table th {
+            background-color: #0078ff;
+            color: white;
+        }
+
+        .continent img.continent-img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Facebook company departments</h1>
+
+    <!-- Facebook Main Box -->
+    <div class="facebook-main">
+        <div class="facebook">
+            <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook Logo">
+            <h2>Facebook</h2>
+        </div>
+    </div>
+
+    <!-- Continents and Branches -->
+    <div class="container">
+        <!-- North America -->
+        <div class="continent">
+            <img class="continent-img" src="https://kaypark.com/wp-content/uploads/2018/04/AmericanFlag-480x300.png" alt="North America">
+            <h2>North America - Cybersecurity</h2>
+            <ul class="branch-list">
+                <li class="branch-item">
+                    <span class="branch-title"><img src="https://www.patriotwood.com/cdn/shop/products/Colorado-Wood-Flag-1_ec8102d2-950e-4b5f-90b6-4c426480de94.jpg?v=1411699967" alt="Colorado Flag"> Colorado (Denver)</span>
+                    <table class="department-table">
+                        <tr>
+                            <th>Departments</th>
+                        </tr>
+                        <tr>
+                            <td>Application security</td>
+                        </tr>
+                        <tr>
+                            <td>Incident response</td>
+                        </tr>
+                        <tr>
+                            <td>Network security</td>
+                        </tr>
+                        <tr>
+                            <td>Security architecture</td>
+                        </tr>
+                    </table>
+                </li>
+                <li class="branch-item">
+                    <span class="branch-title"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0OGWRK45rWycbdUG_6IyWNj-1g-XPY1zk_w&s" alt="Texas Flag"> Texas (Dallas)</span>
+                    <table class="department-table">
+                        <tr>
+                            <th>Departments</th>
+                        </tr>
+                        <tr>
+                            <td>SOC</td>
+                        </tr>
+                        <tr>
+                            <td>Pentesting</td>
+                        </tr>
+                        <tr>
+                            <td>DLP</td>
+                        </tr>
+                        <tr>
+                            <td>Forensics</td>
+                        </tr>
+                    </table>
+                </li>
+                <li class="branch-item">
+                    <span class="branch-title"><img src="https://www.colonialflag.com/cdn/shop/files/Utah_Together.png?v=1708980396" alt="Utah Flag"> Utah (Salt Lake City)</span>
+                    <table class="department-table">
+                        <tr>
+                            <th>Departments</th>
+                        </tr>
+                        <tr>
+                            <td>Threat intelligence</td>
+                        </tr>
+                        <tr>
+                            <td>Vulnerability management</td>
+                        </tr>
+                        <tr>
+                            <td>Cloud Security</td>
+                        </tr>
+                        <tr>
+                            <td>IoT Security</td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Asia -->
+        <div class="continent">
+            <img class="continent-img" src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Flag_of_Asia.png" alt="Asia">
+            <h2>Asia - IT</h2>
+            <ul class="branch-list">
+                <li class="branch-item">
+                    <span class="branch-title"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/1200px-Flag_of_Israel.svg.png" alt="Israel Flag"> Israel (Tel Aviv)</span>
+                    <table class="department-table">
+                        <tr>
+                            <th>Departments</th>
+                        </tr>
+                        <tr>
+                            <td>IT</td>
+                        </tr>
+                        <tr>
+                            <td>QA</td>
+                        </tr>
+                        <tr>
+                            <td>Sales</td>
+                        </tr>
+                        <tr>
+                            <td>HR</td>
+                        </tr>
+                    </table>
+                </li>
+                <li class="branch-item">
+                    <span class="branch-title"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqetmflxHNT2zfaSnF2TSFpQl4_ZIC1LNk5g&s" alt="Japan Flag"> Japan (Tokyo)</span>
+                    <table class="department-table">
+                        <tr>
+                            <th>Departments</th>
+                        </tr>
+                        <tr>
+                            <td>Tech support</td>
+                        </tr>
+                        <tr>
+                            <td>Helpdesk</td>
+                        </tr>
+                        <tr>
+                            <td>Project management</td>
+                        </tr>
+                        <tr>
+                            <td>Asset management</td>
+                        </tr>
+                    </table>
+                </li>
+                <li class="branch-item">
+                    <span class="branch-title"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf8sgzYo_8TbQaBP8zKOwVe7E0k8hWk98onA&s" alt="China Flag"> China (Shanghai)</span>
+                    <table class="department-table">
+                        <tr>
+                            <th>Departments</th>
+                        </tr>
+                        <tr>
+                            <td>Network Administration</td>
+                        </tr>
+                        <tr>
+                            <td>Database Administration</td>
+                        </tr>
+                        <tr>
+                            <td>Virtualization</td>
+                        </tr>
+                        <tr>
+                            <td>System Administration</td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Europe -->
+        <div class="continent">
+            <img class="continent-img" src="https://www.parleu2024.be/sites/default/files/styles/original_ratio_zero/public/2024-01/europa-vlag-1776253-pixabay.jpg?itok=8TYUK9je" alt="Europe">
+            <h2>Europe - Software</h2>
+            <ul class="branch-list">
+                <li class="branch-item">
+                    <span class="branch-title"><img src="https://cdn11.bigcommerce.com/s-2lbnjvmw4d/images/stencil/1280x1280/products/2976/4926/irelandmaterial__67135.1601394153.jpg?c=2" alt="Ireland Flag"> Ireland (Dublin)</span>
+                    <table class="department-table">
+                        <tr>
+                            <th>Departments</th>
+                        </tr>
+                        <tr>
+                            <td>Software Development</td>
+                        </tr>
+                        <tr>
+                            <td>Data analysis</td>
+                        </tr>
+                        <tr>
+                            <td>UX/UI</td>
+                        </tr>
+                        <tr>
+                            <td>Devops</td>
+                        </tr>
+                    </table>
+                </li>
+                <li class="branch-item">
+                    <span class="branch-title"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/255px-Flag_of_France.svg.png" alt="France Flag"> France (Paris)</span>
+                    <table class="department-table">
+                        <tr>
+                            <th>Departments</th>
+                        </tr>
+                        <tr>
+                            <td>Machine Learning</td>
+                        </tr>
+                        <tr>
+                            <td>Data Science</td>
+                        </tr>
+                        <tr>
+                            <td>Data Engineering</td>
+                        </tr>
+                        <tr>
+                            <td>API Development</td>
+                        </tr>
+                    </table>
+                </li>
+                <li class="branch-item">
+                    <span class="branch-title"><img src="https://cdn.britannica.com/97/897-050-0BFECDA5/Flag-Germany.jpg" alt="Germany Flag"> Germany (Hamburg)</span>
+                    <table class="department-table">
+                        <tr>
+                            <th>Departments</th>
+                        </tr>
+                        <tr>
+                            <td>Integration</td>
+                        </tr>
+                        <tr>
+                            <td>R&D</td>
+                        </tr>
+                        <tr>
+                            <td>Product Support</td>
+                        </tr>
+                        <tr>
+                            <td>Systems Architecture</td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <h1>By Shay Aviv</h1>
+</body>
+</html>

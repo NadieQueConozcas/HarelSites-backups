@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אודות ומידע</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1877f2;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            vertical-align: middle;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        /* Navigation styles */
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            display: inline-block;
+            background-color: #1877f2;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #145db3;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Animation for links */
+        nav a {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>אודות ומידע - פייסבוק</h1>
+</header>
+
+<div class="container">
+    <div class="image-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Icon" class="icon">
+<img src="/assignments/2024/September/18/132050.png" alt="Uploaded Icon" class="icon" width="300" height="300">
+    </div>
+
+    <p>פייסבוק היא רשת חברתית המאפשרת לאנשים לשמור על קשר, לשתף תכנים ולהתחבר עם חברים ומשפחה.</p>
+    <p>נוסדה על ידי מארק צוקרברג בשנת 2004 והיא אחת הרשתות החברתיות הפופולריות ביותר בעולם.</p>
+
+    <div>
+        <img src="https://d1i4t8bqe7zgj6.cloudfront.net/thumbnails/57c48cc8e4b03d68f4deda5f/05514203.jpg" alt="Facebook Image" width="300" height="200">
+    </div>
+
+    <!-- Navigation Section -->
+    <nav>
+        <a href="https://shay.alum.sh/assignments/2024/September/18/second_task_videos" target="_blank">המלצות וקישורים</a>
+        <a href="https://shay.alum.sh/project/facebook.html" target="_blank">מבוא</a>
+        <a href="https://shay.alum.sh/project/facebooklogin.html" target="_blank">התחברות</a>
+    </nav>
+
+    <footer>
+        <b><p>Made by Shay Aviv</p></b>
+    </footer>
+</div>
+
+</body>
+</html>

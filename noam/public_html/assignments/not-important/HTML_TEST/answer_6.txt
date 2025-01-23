@@ -1,0 +1,19 @@
+הראשון: length
+
+הפונקציה מחזירה את אורך המחרוזת. (כמות התבים)
+
+let myString = "Hello world!";
+console.log(myString.length);
+
+תחזיר 12
+
+
+
+השני: toUpperCase
+
+הופך מחרוזת לאותיות גדולות.
+
+let myString = "Hello world!";
+console.log(myString.toUpperCase());
+
+תחזיר: HELLO WORLD!

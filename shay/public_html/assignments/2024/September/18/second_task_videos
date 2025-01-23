@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>המלצות וקישורים על פייסבוק</title>
+</head>
+<body bgcolor="lightblue">
+
+    <center>
+        <h1>המלצות על פייסבוק</h1>
+        <p>בעמוד זה תמצאו סרטונים, קישורים והמלצות על הרשת החברתית פייסבוק.</p>
+        
+       
+        <p><a href="https://shay.alum.sh/assignments/2024/September/18/first_task_about_page" target="_blank">לחץ כאן למידע נוסף ואודות האתר</a></p>
+
+        <br>
+
+        
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" width="100" height="100" alt="Facebook Icon">
+
+        <br><br>
+
+        
+        <iframe width="280" height="157" src="https://www.youtube.com/embed/bxDsGjRuFAI?si=Q0URngqbFzD942df" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+        <br><br>
+
+        
+        <iframe width="280" height="157" src="https://www.youtube.com/embed/WXc31dfeTYg?si=yUdutpTrVMqSNFW2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <br><br>
+
+        <!-- קישור נוסף -->
+        <p><a href="https://www.facebook.com" target="_blank">בקרו באתר פייסבוק הרשמי</a></p>
+        <p><a href="https://shay.alum.sh/assignments/2024/September/18/first_task_about_page" target="_blank">לחץ כאן לאודות ומידע</a></p>
+        <p><a href="https://shay.alum.sh/project/facebook.html" target="_blank">לחץ כאן למבוא</a></p>
+        <p><a href="https://shay.alum.sh/project/facebooklogin.html" target="_blank">לחץ כאן להתחברות</a></p>
+        <br>
+
+        <!-- קרדיט -->
+        <p><b>Made by Shay Aviv</b></p>
+    </center>
+    
+</body>
+</html>

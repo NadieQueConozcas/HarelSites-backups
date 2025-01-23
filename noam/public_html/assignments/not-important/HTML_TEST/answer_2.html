@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Password Validation</title>
+    </head>
+    <body>
+
+        <h2>Password Validation:</h2>
+
+        <label for="password">Enter password:</label>
+        <input type="text" id="password" name="password" oninput="validatePassword()">
+
+        <p id="result"></p>
+
+    </body>
+    <script>
+        function validatePassword() {
+            var password = document.getElementById("password").value;
+            var message = "";
+
+            // Include A
+            if (!password.includes("A")) {
+                message += "Password must include the letter A.<br>";
+            }
+
+            // Does not include B
+            if (password.includes("B")) {
+                message += "Password cannot contain the letter B.<br>";
+            }
+
+            // Can use C twice
+            var countC = (password.split('C').length - 1);
+            if (countC > 1) {
+                message += "The letter C be used twice.<br>";
+            }
+
+            if (message === "") {
+                message = "Password is valid!";
+            }
+            document.getElementById("result").innerHTML = message;
+        }
+    </script>
+</html>

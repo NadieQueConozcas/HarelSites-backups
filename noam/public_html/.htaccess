@@ -1,0 +1,4 @@
+RewriteEngine On
+
+RedirectMatch 301 ^/learnings/(.*)$ https://learnings.alum.sh/$1
+Redirect 301 /assignments/not-important/bg-color.html https://noam.alum.sh/assignments/not-important/bg-color/

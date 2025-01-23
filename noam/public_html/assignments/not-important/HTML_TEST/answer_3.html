@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Form</title>
+    </head>
+    <body>
+        <h2>Form</h2>
+        <form id="myForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" oninput="validateNameAndAddress()">
+            <p id="errorMessage1" style="color: red;"></p>
+            <br><br>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" oninput="validateNameAndAddress()">
+            <p id="errorMessage2" style="color: red;"></p>
+            <br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" oninput="validatePassowrd()">
+            <p id="errorMessage3" style="color: red;"></p>
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <br><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" oninput="validateAge()">
+            <p id="errorMessage4" style="color: red;"></p>
+            <br><br>
+
+            <label for="thoughts">Thoughts on the website:</label><br>
+            <textarea id="thoughts" name="thoughts" rows="4" cols="50"></textarea>
+            <br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+    <script>
+        function validateNameAndAddress() {
+            var errorMessage1 = "";
+            var errorMessage2 = "";
+
+            var name = document.getElementById("name").value;
+            var address = document.getElementById("address").value;
+
+            // Check if name and address have at least one letter
+            if (!/[a-zA-Z]/.test(name) && name) {
+                errorMessage1 += "Name must contain at least one letter.";
+                document.getElementById("errorMessage1").innerHTML = errorMessage1;
+            } else {
+                document.getElementById("errorMessage1").innerHTML = "";
+            }
+
+            if (!/[a-zA-Z]/.test(address) && address) {
+                errorMessage2 += "Address must contain at least one letter.";
+                document.getElementById("errorMessage2").innerHTML = errorMessage2;
+            } else {
+                document.getElementById("errorMessage2").innerHTML = "";
+            }
+        }
+
+        function validatePassowrd() {
+            var errorMessage3 = "";
+            var password = document.getElementById("password").value;
+
+            // Check if password is at least 3 characters long
+            if (password.length < 3) {
+                errorMessage3 += "Password must be at least 3 characters long.";
+                document.getElementById("errorMessage3").innerHTML = errorMessage3;
+            } else {
+                document.getElementById("errorMessage3").innerHTML = "";
+            }
+        }
+
+        function validateAge() {
+            var errorMessage4 = "";
+            var age = document.getElementById("age").value;
+
+            // Check if age is between 10 and 125
+            if (age < 10 || age > 125) {
+                errorMessage4 += "Age must be between 10 and 125.";
+                document.getElementById("errorMessage4").innerHTML = errorMessage4;
+            } else {
+                document.getElementById("errorMessage4").innerHTML = "";
+            }
+        }
+    </script>
+</html>
