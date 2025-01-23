@@ -227,3 +227,44 @@ function checkName(name) {
         console.warn("Could not find nameElement, submitButton or nameWarning.");
     }
 }
+
+
+/* Form AJAX response handling */
+document.addEventListener("DOMContentLoaded", function() {
+    function handleFormSubmission(event) {
+        event.preventDefault();
+
+        const form = event.target;
+        const submitButton = form.querySelector('input[type="submit"]');
+        submitButton.disabled = true;
+        const formData = new FormData(form);
+        const apiEndpoint = form.getAttribute('action');
+
+        // Send the form data via AJAX
+        fetch(apiEndpoint, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            // Show the response
+            const responseMessageContainer = document.getElementById('response-message');
+            responseMessageContainer.innerHTML = data;
+            responseMessageContainer.style.display = 'block';
+            setTimeout(() => {
+                responseMessageContainer.style.display = 'none';
+            }, 3000);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        })
+        .finally(() => {
+            submitButton.disabled = false;
+        });
+    }
+
+    const oracleForm = document.getElementById('oracle-form');
+    if (oracleForm) {
+        oracleForm.addEventListener('submit', handleFormSubmission);
+    }
+});

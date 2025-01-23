@@ -20,7 +20,7 @@
                     <img src="/content/images/forms/login.png">
                 </div>
 
-                <form action="/f/login.html">
+                <form id="oracle-form" action="/api/login.php" method="POST">
 
                     <label for="mail">Mail address:</label>
                     <input type="email" id="mail" name="mailaddress" placeholder="Your mail address.." oninput="checkMailAddr(this.value)" required>
@@ -33,6 +33,9 @@
                     <input type="submit" value="Login" disabled>
                 
                 </form>
+
+                <!-- Response message -->
+                <div id="response-message" style="display:none;"></div>  
 
                 <!-- Sign up -->
                 <hr>

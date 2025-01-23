@@ -20,7 +20,7 @@
                     <img src="/content/images/forms/sign-up.png">
                 </div>
 
-                <form action="/f/sign-up.html">
+                <form id="oracle-form" action="/api/register.php" method="POST">
 
                     <label for="mail">Mail address:</label>
                     <input type="email" id="mail" name="mailaddress" placeholder="Your mail address.." oninput="checkMailAddr(this.value)" required>
@@ -29,14 +29,17 @@
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="userpassword" placeholder="Your strong password.." oninput="checkPassword(this.value)" required>
                     <div id="password-warning"></div>
-
+                
                     <label for="repassword">Password again:</label>
                     <input type="password" id="repassword" name="reuserpassword" placeholder="Your strong password again.." oninput="checkRePassword(this.value)" required>
                     <div id="repassword-warning"></div>
-
-                    <input type="submit" value="Sign up" disabled>
                 
-                  </form>
+                    <input type="submit" value="Sign up" disabled>
+                  
+                </form>
+                
+                <!-- Response message -->
+                <div id="response-message" style="display:none;"></div>                
             </div>
         </div>
     </article>
