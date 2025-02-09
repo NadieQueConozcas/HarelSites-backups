@@ -1,0 +1,150 @@
+[
+  {
+    "id": 1,
+    "question": "Which of the following IP address ranges belong to Class A?",
+    "options": [
+      "10.0.0.0 to 10.255.255.255",
+      "172.16.0.0 to 172.31.255.255",
+      "192.168.0.0 to 192.168.255.255",
+      "224.0.0.0 to 239.255.255.255"
+    ],
+    "answer": [
+      "10.0.0.0 to 10.255.255.255"
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Which of the following IP address ranges belong to Class B?",
+    "options": [
+      "10.0.0.0 to 10.255.255.255",
+      "172.16.0.0 to 172.31.255.255",
+      "192.168.0.0 to 192.168.255.255",
+      "224.0.0.0 to 239.255.255.255"
+    ],
+    "answer": [
+      "172.16.0.0 to 172.31.255.255"
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Which of the following IP address ranges belong to Class C?",
+    "options": [
+      "10.0.0.0 to 10.255.255.255",
+      "172.16.0.0 to 172.31.255.255",
+      "192.168.0.0 to 192.168.255.255",
+      "224.0.0.0 to 239.255.255.255"
+    ],
+    "answer": [
+      "192.168.0.0 to 192.168.255.255"
+    ]
+  },
+  {
+    "id": 4,
+    "question": "What would be the subnet mask for a Class C network?",
+    "options": [
+      "255.0.0.0",
+      "255.255.0.0",
+      "255.255.255.0",
+      "255.255.255.255"
+    ],
+    "answer": [
+      "255.255.255.0"
+    ]
+  },
+  {
+    "id": 5,
+    "question": "Given the network 172.16.0.0, what are the network and broadcast addresses for a Class B network?",
+    "options": [
+      "Network: 172.16.0.0, Broadcast: 172.16.255.255",
+      "Network: 172.16.0.0, Broadcast: 172.16.0.255",
+      "Network: 172.16.0.0, Broadcast: 172.16.255.0",
+      "Network: 172.16.0.0, Broadcast: 172.17.255.255"
+    ],
+    "answer": [
+      "Network: 172.16.0.0, Broadcast: 172.16.255.255"
+    ]
+  },
+  {
+    "id": 6,
+    "question": "What does Unicast mean in networking?",
+    "options": [
+      "Unicast sends data to a group of hosts.",
+      "Unicast sends data to all devices.",
+      "Unicast sends data to one specific host.",
+      "Unicast sends data to one specific device in a broadcast group."
+    ],
+    "answer": [
+      "Unicast sends data to one specific host."
+    ]
+  },
+  {
+    "id": 7,
+    "question": "What does Broadcast mean in networking?",
+    "options": [
+      "Broadcast sends data to one specific host.",
+      "Broadcast sends data to all devices on the network.",
+      "Broadcast sends data to a group of hosts.",
+      "Broadcast sends data to a specific range of IP addresses."
+    ],
+    "answer": [
+      "Broadcast sends data to all devices on the network."
+    ]
+  },
+  {
+    "id": 8,
+    "question": "What does Multicast mean in networking?",
+    "options": [
+      "Multicast sends data to one specific host.",
+      "Multicast sends data to all devices on the network.",
+      "Multicast sends data to a group of hosts.",
+      "Multicast sends data to a random set of devices."
+    ],
+    "answer": [
+      "Multicast sends data to a group of hosts."
+    ]
+  },
+  {
+    "id": 9,
+    "question": "Is the IP address 172.11.0.0 valid for a Class B network?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": [
+      "No"
+    ]
+  },
+  {
+    "id": 10,
+    "question": "Is the IP address 192.168.1.1 valid for a Class C network?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": [
+      "Yes"
+    ]
+  },
+  {
+    "id": 11,
+    "question": "Is the IP address 172.20.0.0 valid for a Class B network?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": [
+      "Yes"
+    ]
+  },
+  {
+    "id": 12,
+    "question": "If an IP address is in the range 10.1.1.1 to 10.255.255.255, is it considered an internal (private) IP address?",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": [
+      "Yes"
+    ]
+  }
+]
