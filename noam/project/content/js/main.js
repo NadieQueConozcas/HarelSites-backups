@@ -9,48 +9,23 @@ function checkMailAddr(mailaddr) {
     const mailElement = document.querySelector('input[type="email"]');
     const emailWarning = document.getElementById('email-warning');
     const submitButton = document.querySelector('input[type="submit"]');
-    const emailWarningContents = "<blockquote><p><b>Email requirements:</b></p> <ol> <li>User part must not be empty.</li> <li>Valid domain.</li> <li>One <b>@</b> symble.</li> </ol></blockquote>";
+    const emailWarningContents = "<blockquote><p><b>Email requirements:</b></p> <ol> <li>User part must not be empty.</li> <li>Valid domain.</li> <li>One <b>@</b> symbol.</li> </ol></blockquote>";
+
+    // Regex for valid email: User part (non-empty) + "@" + valid domain with at least one dot
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
     // Check for Elements on DOM
     if (mailElement && emailWarning && submitButton) {
-        let atIndex = mailaddr.indexOf('@');
-        let atCount = mailaddr.split('@').length - 1;
-    
-        if (atCount === 1) {
-            // Get sections
-            let domainPart = mailaddr.slice(atIndex + 1);
-            let userPart = mailaddr.slice(0, atIndex);
-    
-            // Get requiered mail parts
-            let dotCount = domainPart.split('.').length - 1;
-    
-            // Inform users
-            /*
-                Test for:
-                
-                1. One "@"
-                2. User lenght is more than 0
-                3. At least one "."
-                4. Domain is valid
-    
-            */
-            if (atCount === 1 && userPart.length > 0 && dotCount > 0 && !domainPart.startsWith('.') && !domainPart.endsWith('.')) {
-                mailElement.style.border = '5px solid green';
-                emailWarning.innerHTML = '';
-                mailValid = true;
+        if (emailRegex.test(mailaddr)) {  // Check if email matches the regex
+            mailElement.style.border = '5px solid green';
+            emailWarning.innerHTML = '';
+            mailValid = true;
 
-                // Allow submit
-                if (mailValid && passwordValid && rePasswordValid) {
-                    submitButton.disabled = false;
-                } else if (!document.getElementById('password') && mailValid && nameValid) {
-                    submitButton.disabled = false;
-                }
-            }
-            else {
-                mailElement.style.border = '5px solid red';
-                emailWarning.innerHTML = emailWarningContents;
-                mailValid = false;
-                submitButton.disabled = true;
+            // Allow submit
+            if (mailValid && passwordValid && rePasswordValid) {
+                submitButton.disabled = false;
+            } else if (!document.getElementById('password') && mailValid && nameValid) {
+                submitButton.disabled = false;
             }
         } else {
             mailElement.style.border = '5px solid red';
@@ -70,74 +45,26 @@ function checkPassword(password) {
         checkRePassword(rePassword.value);
     }
 
-    // Test password
     const passwordElement = document.getElementById('password');
     const passwordWarning = document.getElementById('password-warning');
-    const passwordWarningContents = "<blockquote> <p><b>Password requirements:</b></p><ol><li>At least 8 characters long.</li> <li>One uppercase letter.</li> <li>One lowercase letter.</li> <li>One number.</li> <li>One special charecter.</li> </ol></blockquote>";
+    const passwordWarningContents = "<blockquote> <p><b>Password requirements:</b></p><ol><li>At least 8 characters long.</li> <li>One uppercase letter.</li> <li>One lowercase letter.</li> <li>One number.</li> <li>One special character.</li> </ol></blockquote>";
     const submitButton = document.querySelector('input[type="submit"]');
+
+    // Regex for password validation
+    // At least 8 characters, one uppercase, one lowercase, one digit, one special character
+    const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
 
     // Check for Elements on DOM
     if (passwordElement && passwordWarning && submitButton) {
-        // Get lenght
-        let passwordLenght = password.length;
+        if (passwordRegex.test(password)) {  // Check if password matches the regex
+            passwordElement.style.border = '5px solid green';
+            passwordWarning.innerHTML = '';
+            passwordValid = true;
 
-        // Set default value
-        let passwordUppercaseCount = 0;
-        let passwordLowercaseCount = 0;
-        let passwordDigitCount = 0;
-        let passWordSpecialCount = 0;
-
-        /* 
-            Test for:
-            
-            1. At least 8 characters long.
-            2. Include at least one uppercase letter.
-            3. Include at least one lowercase letter.
-            4. Include at least one digit.
-            5. Include at least one special charecter.
-
-        */
-        if (passwordLenght >= 8) {
-
-            // Go through each char in the password
-            for (let i = 0; i < passwordLenght; i++) {
-                let char = password[i];
-
-                if (char >= "A" && char <= "Z") { // Check for uppercase
-
-                    passwordUppercaseCount++;
-
-                } else if (char >= "a" && char <= "z") { // Check for lowercase
-
-                    passwordLowercaseCount++;
-
-                } else if (!isNaN(Number(char))) { // Check for digit
-
-                    passwordDigitCount++;
-
-                } else { // Since this should not be a digit nor an alphabetical charecter I can assume its a special charecter.
-
-                    passWordSpecialCount++;
-
-                }
+            // Allow submit
+            if (mailValid && passwordValid && rePasswordValid) {
+                submitButton.disabled = false;
             }
-
-            if (passWordSpecialCount > 0 && passwordUppercaseCount > 0 && passwordLowercaseCount > 0 && passwordDigitCount > 0) {
-                passwordElement.style.border = '5px solid green';
-                passwordWarning.innerHTML = '';
-                passwordValid = true;
-
-                // Allow submit
-                if (mailValid && passwordValid && rePasswordValid) {
-                    submitButton.disabled = false;
-                }
-            } else {
-                passwordElement.style.border = '5px solid red';
-                passwordWarning.innerHTML = passwordWarningContents;
-                passwordValid = false;
-                submitButton.disabled = true;
-            }
-
         } else {
             passwordElement.style.border = '5px solid red';
             passwordWarning.innerHTML = passwordWarningContents;
@@ -153,12 +80,11 @@ function checkRePassword(repassword) {
     const rePasswordElement = document.getElementById('repassword');
     const password = document.getElementById('password');
     const rePasswordWarning = document.getElementById('repassword-warning');
-    const rePasswordWarningContents = "<blockquote><p><b>Passwords does not match.</b></p></blockquote>";
+    const rePasswordWarningContents = "<blockquote><p><b>Passwords do not match.</b></p></blockquote>";
     const submitButton = document.querySelector('input[type="submit"]');
 
     // Check for Elements on DOM
     if (rePasswordElement && password && rePasswordWarning && submitButton) {
-
         if (repassword === password.value) {
             rePasswordElement.style.border = '5px solid green';
             rePasswordWarning.innerHTML = '';
@@ -186,28 +112,13 @@ function checkName(name) {
     const nameWarning = document.getElementById('name-warning');
     const nameWarningContents = "<blockquote> <p><b>Names can only include alphabetical characters and spaces.</b></p> </blockquote>";
     const submitButton = document.querySelector('input[type="submit"]');
-    let isAlpha = true;
+
+    // Regex for name validation: Only alphabetic characters and spaces
+    const nameRegex = /^[A-Za-z\s]+$/;
 
     // Check for Elements on DOM
     if (nameElement && nameWarning && nameWarningContents) {
-        /* 
-            Test for:
-            
-            1. includes only alphabetic chars
-
-        */
-
-        // Go through each char in the name
-        for (let i = 0; i < name.length; i++) {
-            let char = name[i];
-
-            if (!(char >= "a" && char <= "z") && !(char >= "A" && char <= "Z") && char !== ' ') {
-                isAlpha = false;
-                break;
-            }
-        }
-
-        if (isAlpha) {
+        if (nameRegex.test(name)) {  // Check if name matches the regex
             nameElement.style.border = '5px solid green';
             nameWarning.innerHTML = '';
             nameValid = true;
@@ -222,49 +133,7 @@ function checkName(name) {
             nameValid = false;
             submitButton.disabled = true;
         }
-
     } else {
         console.warn("Could not find nameElement, submitButton or nameWarning.");
     }
 }
-
-
-/* Form AJAX response handling */
-document.addEventListener("DOMContentLoaded", function() {
-    function handleFormSubmission(event) {
-        event.preventDefault();
-
-        const form = event.target;
-        const submitButton = form.querySelector('input[type="submit"]');
-        submitButton.disabled = true;
-        const formData = new FormData(form);
-        const apiEndpoint = form.getAttribute('action');
-
-        // Send the form data via AJAX
-        fetch(apiEndpoint, {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.text())
-        .then(data => {
-            // Show the response
-            const responseMessageContainer = document.getElementById('response-message');
-            responseMessageContainer.innerHTML = data;
-            responseMessageContainer.style.display = 'block';
-            setTimeout(() => {
-                responseMessageContainer.style.display = 'none';
-            }, 3000);
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        })
-        .finally(() => {
-            submitButton.disabled = false;
-        });
-    }
-
-    const oracleForm = document.getElementById('oracle-form');
-    if (oracleForm) {
-        oracleForm.addEventListener('submit', handleFormSubmission);
-    }
-});
