@@ -43,6 +43,19 @@ td {
   height: auto;
 }
 
+.centered-video {
+  text-align: center;
+  margin: 40px 10px;
+}
+
+.centered-video iframe {
+  color: #ff0000;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 40px;
+}
+
+
 .lightblue-centered-img {
   text-align: center;
   margin: 40px 10px;
