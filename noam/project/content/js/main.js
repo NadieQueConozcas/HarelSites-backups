@@ -47,12 +47,12 @@ function checkPassword(password) {
 
     const passwordElement = document.getElementById('password');
     const passwordWarning = document.getElementById('password-warning');
-    const passwordWarningContents = "<blockquote> <p><b>Password requirements:</b></p><ol><li>At least 8 characters long.</li> <li>One uppercase letter.</li> <li>One lowercase letter.</li> <li>One number.</li> <li>One special character.</li> </ol></blockquote>";
+    const passwordWarningContents = "<blockquote> <p><b>Password requirements:</b></p><ol><li>Start with a (non digit) character.</li> <li>Between 6-8 characters long.</li> <li>One uppercase letter.</li> <li>One lowercase letter.</li> <li>One number.</li> <li>One special character.</li> </ol></blockquote>";
     const submitButton = document.querySelector('input[type="submit"]');
 
     // Regex for password validation
     // At least 8 characters, one uppercase, one lowercase, one digit, one special character
-    const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+    const passwordRegex = /^[A-Za-z\u0590-\u05FF](?=[A-Za-z\d!@#$%^&*]{6,8}$)(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{6,8}$/;
 
     // Check for Elements on DOM
     if (passwordElement && passwordWarning && submitButton) {

@@ -25,24 +25,44 @@
                     <label for="fname">Full Name:</label>
                     <input type="text" id="fname" name="fullname" placeholder="Your name.." oninput="checkName(this.value)" required>
                     <div id="name-warning"></div>
-
+                
                     <label for="mail">Mail address:</label>
                     <input type="email" id="mail" name="mailaddress" placeholder="Your mail address.." oninput="checkMailAddr(this.value)" required>
                     <div id="email-warning"></div>
                 
                     <label for="pcategoty">Product category:</label>
                     <select id="pcategoty" name="pcategoty">
-                      <option value="OCI">Oracle Cloud Infrastructure</option>
-                      <option value="OCA">Oracle Cloud Applications</option>
-                      <option value="HS">Hardware and Software</option>
+                        <option value="OCI">Oracle Cloud Infrastructure</option>
+                        <option value="OCA">Oracle Cloud Applications</option>
+                        <option value="HS">Hardware and Software</option>
                     </select>
+                
+                    <input type="hidden" id="form-id" name="form-id" value="1">
                 
                     <label for="subject">Subject:</label>
                     <textarea id="subject" name="subject" placeholder="Write something.." required></textarea>
+
+                    <!-- Checkbox for agreement -->
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">I agree to the terms and conditions</label>
+
+                    <!-- Radio buttons for urgency level -->
+                    <fieldset>
+                        <legend>Urgency Level:</legend>
+                        <input type="radio" id="low" name="urgency" value="Low" required>
+                        <label for="low">Low</label>
+                
+                        <input type="radio" id="medium" name="urgency" value="Medium">
+                        <label for="medium">Medium</label>
+                
+                        <input type="radio" id="high" name="urgency" value="High">
+                        <label for="high">High</label>
+                    </fieldset>
                 
                     <input type="submit" value="Submit" disabled>
+                    <input type="reset" value="Reset">
                 
-                  </form>
+                </form>                
             </div>
         </div>
     </article>

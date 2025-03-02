@@ -33,9 +33,11 @@
                     <label for="repassword">Password again:</label>
                     <input type="password" id="repassword" name="reuserpassword" placeholder="Your strong password again.." oninput="checkRePassword(this.value)" required>
                     <div id="repassword-warning"></div>
+
+                    <input type="hidden" id="form-id" name="form-id" value="3">
                 
                     <input type="submit" value="Sign up" disabled>
-                  
+                    <input type="reset" value="Reset">
                 </form>
                 
                 <!-- Response message -->
